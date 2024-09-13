@@ -1,7 +1,22 @@
 import React from "react";
 import { FaSnapchat, FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
+import './page.scss';
 
-const HomePage: React.FC = () => {
+function MenuBar() {
+  return (
+    <nav className="menu-bar flex items-center justify-center p-4 border-b border-gray-700">
+      <ul className="flex space-x-8 text-white">
+        <li><a href="#" className="hover:text-gray-200">Bagues</a></li>
+        <li><a href="#" className="hover:text-gray-200">Colliers</a></li>
+        <li><a href="#" className="hover:text-gray-200">Bracelets</a></li>
+        <li><a href="#" className="hover:text-gray-200">Accessoires</a></li>
+        <li><a href="#" className="hover:text-gray-200">À propos de nous</a></li>
+      </ul>
+    </nav>
+  );
+}
+
+function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
       {/* Header */}
@@ -11,23 +26,19 @@ const HomePage: React.FC = () => {
 
         {/* Boutons de Connexion et d'Inscription */}
         <div className="space-x-4">
-          <button className="px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200">
-            Connexion
-          </button>
-          <button className="px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200">
-            Inscription
-          </button>
+          <button className="button">Connexion</button>
+          <button className="button">Inscription</button>
         </div>
       </header>
 
-      {/* Contenu principal */}
+      {/* Barre de Navigation */}
+      <MenuBar />
+
       <main className="flex-grow">
-        {/* Contenu du site ici */}
+        {/* Contenu principal */}
       </main>
 
-      {/* Footer */}
-      <footer className="flex flex-col items-center justify-between p-4 border-t border-gray-700">
-        {/* Icônes des réseaux sociaux */}
+      <footer className="footer flex flex-col items-center justify-between p-4 border-t border-gray-700">
         <div className="flex space-x-6">
           <a href="https://www.snapchat.com" target="_blank" rel="noopener noreferrer">
             <FaSnapchat size={24} />
@@ -43,7 +54,6 @@ const HomePage: React.FC = () => {
           </a>
         </div>
 
-        {/* Mentions légales et copyright */}
         <div className="text-center mt-4">
           <p>Mentions légales</p>
           <p>&copy; 2024 TECUM. Tous droits réservés.</p>
@@ -51,6 +61,6 @@ const HomePage: React.FC = () => {
       </footer>
     </div>
   );
-};
+}
 
 export default HomePage;
