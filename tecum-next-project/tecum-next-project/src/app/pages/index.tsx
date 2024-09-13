@@ -1,5 +1,6 @@
 import React from "react";
 import { FaSnapchat, FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
+import  './index.scss';
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
@@ -12,7 +13,7 @@ module.exports = {
     plugins: [],
   };
   
-const HomePage: React.FC = () => {
+function HomePage () {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
       {/* Header */}

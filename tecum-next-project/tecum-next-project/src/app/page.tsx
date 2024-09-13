@@ -56,7 +56,7 @@ function HomePage() {
 
         <div className="text-center mt-4">
           <p>Mentions légales</p>
-          <p>&copy; 2024 TECUM. Tous droits réservés.</p>
+          <p>&copy; 2024 TECUUUM. Tous droits réservés.</p>
         </div>
       </footer>
     </div>
