@@ -1,7 +1,96 @@
+ @import url('https://fonts.cdnfonts.com/css/dusk-demon');
+           
+
+body {
+  font-size: 3rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1rem;
+  background: #555;
+}
+
+.footer {
+  justify-content: end;
+  padding: 3rem;
+  text-align: center;
+  font-size: 1rem;
+ background: #555;
+}
+
+.buttons {
+  font-size: small;
+  color: #f6f6f6;
+  background-color: #ed0808;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  margin-left: 1rem; /* Ajoute un espace entre les boutons */
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+
+
+h1 {
+  margin-top: -5rem;
+  color: hsl(0, 93%, 48%);
+  font-size: 15rem;
+  text-align: center;
+  font-family: 'Dusk Demon 3D Italic', sans-serif; }
+
+
+
+.social-medias {
+  display: flex; /* Alignement des icônes en ligne */
+  justify-content: center;
+  gap: 1rem; /* Espace entre les icônes */
+}
+
+.merchandising {
+  display: none; /* Masque la barre de navigation par défaut */
+  justify-items: center;
+  font-size: medium;
+}
+
+.merchandising.visible {
+  display: inline-block; /* Rend la MenuBar visible lors du clic sur le logo */
+}
+
+
+.dialogue-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+    .speech-bubble {
+      background: #fff;
+      border: 2px solid #000;
+      width: 200vh;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-size: 2rem;
+      font-family: 'Dusk Demon', sans-serif; 
+       max-width: 200px;
+    }
+  
+
+
 .chat-box {
   width: 100%;
   background-color: black;
-  border: 2px solid #ffcb05; /* Couleur jaune rétro */
+  border: 2px solid #ffcb05;
   padding: 10px;
   margin-top: 20px;
 
@@ -39,6 +128,7 @@
     input {
       width: 80%;
       padding: 5px;
+      font-size:x-large;
       font-family: 'PixelatedFont', sans-serif;
       border: 2px solid #ffcb05;
       background-color: black;
@@ -46,6 +136,7 @@
     }
 
     button {
+      font-size: x-large;
       width: 18%;
       background-color: #ffcb05;
       color: black;

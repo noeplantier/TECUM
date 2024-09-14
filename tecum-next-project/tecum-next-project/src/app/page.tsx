@@ -100,7 +100,7 @@ function HomePage() {
         </div>
       </main>
 
-      {/* Zone de Chat Style Pokémon */}
+   
       <ChatBox />
 
       <footer className="footer flex flex-col items-center justify-between p-4 border-t border-gray-700">
