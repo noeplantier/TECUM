@@ -22,7 +22,7 @@ function HomePage() {
       {/* Header */}
       <header className="flex items-center justify-between p-4 border-b border-gray-700">
         {/* Logo du site */}
-        <div className="text-2xl font-bold">TECUM</div>
+        <h1 className="text-2xl font-bold">TECUM</h1>
 
         {/* Boutons de Connexion et d'Inscription */}
         <div className="space-x-4">
@@ -56,7 +56,7 @@ function HomePage() {
 
         <div className="text-center mt-4">
           <p>Mentions légales</p>
-          <p>&copy; 2024 TECUUUM. Tous droits réservés.</p>
+          <p>&copy; 2024 TECUM. Tous droits réservés.</p>
         </div>
       </footer>
     </div>
