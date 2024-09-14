@@ -1,3 +1,6 @@
+ @import url('https://fonts.cdnfonts.com/css/dusk-demon');
+           
+
 body {
   font-size: 3rem;
   font-family: 'Arial', sans-serif;
@@ -7,8 +10,19 @@ body {
   min-height: 100vh;
 }
 
-.header, .footer {
-  border-color: #555;
+.header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #555;
+}
+
+.footer {
+  justify-content: end;
+  padding: 3rem;
+  text-align: center;
+  font-size: 1rem;
+ background: #555;
 }
 
 .buttons {
@@ -23,24 +37,16 @@ body {
   }
 }
 
-.header {
-  background-color: #d3d3d3; /* Gris clair pour le header */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-}
 
-.header h1 {
-  margin-right: auto; /* Assure que le H1 est à gauche et les boutons à droite */
-}
 
-.footer {
-  justify-content: end;
-  padding: 1rem;
+h1 {
+  margin-top: -5rem;
+  color: hsl(0, 93%, 48%);
+  font-size: 15rem;
   text-align: center;
-  font-size: 1rem;
-}
+  font-family: 'Dusk Demon 3D Italic', sans-serif; }
+
+
 
 .social-medias {
   display: flex; /* Alignement des icônes en ligne */
@@ -58,16 +64,11 @@ body {
   display: inline-block; /* Rend la MenuBar visible lors du clic sur le logo */
 }
 
-h1 {
-  color: hsl(0, 93%, 48%);
-  font-size: 8rem;
-  text-align: center;
-}
 
 .dialogue-box {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
   .angel, .demon {
     display: flex;
     flex-direction: column;
@@ -83,8 +84,8 @@ h1 {
       border-radius: 10px;
       margin-top: 10px;
       text-align: center;
-      font-family: 'Press Start 2P', cursive; /* Police rétro */
-      max-width: 200px;
+      font-family: 'Dusk Demon', sans-serif; 
+       max-width: 200px;
     }
   }
 }

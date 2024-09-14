@@ -5,7 +5,6 @@ import { FaSnapchat, FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa
 import angelDemon from './assets/angeldemon.jpeg';  // Import direct de l'image
 import './page.scss';
 
-// Définition des types
 interface MenuBarProps {
   showMerch: boolean;
 }
@@ -33,8 +32,7 @@ function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
-      {/* Header */}
-      <header className="flex items-center justify-between p-4 border-b border-gray-700">
+      <header>
         <img 
           className="logo-tecum" 
           src={angelDemon}
@@ -43,7 +41,7 @@ function HomePage() {
         />
 
         <h1 className="text-2xl font-bold mr-auto">TECUM</h1>
-        <div className="flex space-x-4">
+        <div>
           <button className="buttons">Connexion</button>
           <button className="buttons">Inscription</button>
         </div>
@@ -52,18 +50,18 @@ function HomePage() {
       {/* Barre de Navigation */}
       <MenuBar showMerch={showMerch} />
 
-      <main className="flex-grow flex justify-center items-center">
+      <main >
         <div className="dialogue-box">
           <div className="angel">
-            <img src="./assets/angel.png" alt="Angel" className="character"/>
+            <img src="./assets/angel.png" alt="Angel"/>
             <div className="speech-bubble">
-              <p>"Pourquoi es-tu ici, démon ?"</p>
+              <h2>"Pourquoi es-tu ici, démon ?"</h2>
             </div>
           </div>
           <div className="demon">
             <img src="./assets/demon.jpeg" alt="Demon" className="character"/>
             <div className="speech-bubble">
-              <p>"Je suis ici pour les bijoux TECUM..."</p>
+              <h2>"Je suis ici pour les bijoux TECUM..."</h2>
             </div>
           </div>
         </div>
