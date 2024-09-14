@@ -1,11 +1,19 @@
-import React from "react";
+"use client";  
+
+import React, { useState } from "react";
 import { FaSnapchat, FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
+import angelDemon from './assets/angeldemon.jpeg';  // Import direct de l'image
 import './page.scss';
 
-function MenuBar() {
+// Définition des types
+interface MenuBarProps {
+  showMerch: boolean;
+}
+
+function MenuBar <MenuBarProps> ({ showMerch }) {
   return (
-    <nav className="menu-bar flex items-center justify-center p-4 border-b border-gray-700">
-      <ul className="flex space-x-8 text-white">
+    <nav className={`menu-bar ${showMerch ? "visible" : "hidden"}`}>
+      <ul className="merchandising">
         <li><a href="#" className="hover:text-gray-200">Bagues</a></li>
         <li><a href="#" className="hover:text-gray-200">Colliers</a></li>
         <li><a href="#" className="hover:text-gray-200">Bracelets</a></li>
@@ -14,32 +22,59 @@ function MenuBar() {
       </ul>
     </nav>
   );
-}
+};
 
 function HomePage() {
+  const [showMerch, setShowMerch] = useState<boolean>(false);
+
+  const handleLogoClick = () => {
+    setShowMerch(!showMerch);
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
       {/* Header */}
       <header className="flex items-center justify-between p-4 border-b border-gray-700">
-        {/* Logo du site */}
-        <h1 className="text-2xl font-bold">TECUM</h1>
+        <img 
+          className="logo-tecum" 
+          src={angelDemon}
+          alt="Logo Tecum" 
+          onClick={handleLogoClick}
+        />
 
-        {/* Boutons de Connexion et d'Inscription */}
-        <div className="space-x-4">
-          <button className="button">Connexion</button>
-          <button className="button">Inscription</button>
+        <h1 className="text-2xl font-bold mr-auto">TECUM</h1>
+        <div className="flex space-x-4">
+          <button className="buttons">Connexion</button>
+          <button className="buttons">Inscription</button>
         </div>
       </header>
 
       {/* Barre de Navigation */}
-      <MenuBar />
+      <MenuBar showMerch={showMerch} />
 
-      <main className="flex-grow">
-        {/* Contenu principal */}
+      <main className="flex-grow flex justify-center items-center">
+        <div className="dialogue-box">
+          <div className="angel">
+            <img src="./assets/angel.png" alt="Angel" className="character"/>
+            <div className="speech-bubble">
+              <p>"Pourquoi es-tu ici, démon ?"</p>
+            </div>
+          </div>
+          <div className="demon">
+            <img src="./assets/demon.jpeg" alt="Demon" className="character"/>
+            <div className="speech-bubble">
+              <p>"Je suis ici pour les bijoux TECUM..."</p>
+            </div>
+          </div>
+        </div>
       </main>
 
       <footer className="footer flex flex-col items-center justify-between p-4 border-t border-gray-700">
-        <div className="flex space-x-6">
+        <div className="text-center mt-4">
+          <p>Mentions légales</p>
+          <p>&copy; 2024 TECUM. Tous droits réservés.</p>
+        </div>
+        <div className="social-medias">
           <a href="https://www.snapchat.com" target="_blank" rel="noopener noreferrer">
             <FaSnapchat size={24} />
           </a>
@@ -53,14 +88,9 @@ function HomePage() {
             <FaPinterest size={24} />
           </a>
         </div>
-
-        <div className="text-center mt-4">
-          <p>Mentions légales</p>
-          <p>&copy; 2024 TECUM. Tous droits réservés.</p>
-        </div>
       </footer>
     </div>
   );
-}
+};
 
 export default HomePage;

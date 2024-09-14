@@ -1,54 +1,90 @@
 body {
   font-size: 3rem;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-  }
+  font-family: 'Arial', sans-serif;
+}
 
-  
-  .min-h-screen {
-    min-height: 100vh;
-  }
+.min-h-screen {
+  min-height: 100vh;
+}
 
-  
-  .header, .footer {
-    border-color: #555;
-  }
-  
+.header, .footer {
+  border-color: #555;
+}
 
-  .button {
-    font-size: small;
-    justify-content: space-between;
-    color: #f6f6f6;
-    background-color: #ed0808;
-    border-radius: 10px;
-    padding: 1rem 1rem;
-    &:hover {
-      background-color: #ddd;
+.buttons {
+  font-size: small;
+  color: #f6f6f6;
+  background-color: #ed0808;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  margin-left: 1rem; /* Ajoute un espace entre les boutons */
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+.header {
+  background-color: #d3d3d3; /* Gris clair pour le header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header h1 {
+  margin-right: auto; /* Assure que le H1 est à gauche et les boutons à droite */
+}
+
+.footer {
+  justify-content: end;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.social-medias {
+  display: flex; /* Alignement des icônes en ligne */
+  justify-content: center;
+  gap: 1rem; /* Espace entre les icônes */
+}
+
+.merchandising {
+  display: none; /* Masque la barre de navigation par défaut */
+  justify-items: center;
+  font-size: medium;
+}
+
+.merchandising.visible {
+  display: inline-block; /* Rend la MenuBar visible lors du clic sur le logo */
+}
+
+h1 {
+  color: hsl(0, 93%, 48%);
+  font-size: 8rem;
+  text-align: center;
+}
+
+.dialogue-box {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  .angel, .demon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .character {
+      width: 100px;
+      height: auto;
+    }
+    .speech-bubble {
+      background: #fff;
+      border: 2px solid #000;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+      text-align: center;
+      font-family: 'Press Start 2P', cursive; /* Police rétro */
+      max-width: 200px;
     }
   }
-  
-  .footer {
-    justify-content: end;
-    padding: 1rem;
-    text-align: center;
-  
-    a {
-      color: #f8b2d1;
-      margin-right: 1rem;
-      &:hover {
-        color: #fff;
-      }
-    }
-  
-    p {
-      margin: 0.5rem 0;
-    }
-  }
-
-  h1{
-color:hsl(0, 93%, 48%);
-font-size: 8rem;
-text-align: center;
-
-  }
-  
+}
