@@ -9,7 +9,7 @@ interface MenuBarProps {
   showMerch: boolean;
 }
 
-function MenuBar <MenuBarProps> ({ showMerch }) {
+function MenuBar<MenuBarProps>({ showMerch }) {
   return (
     <nav className={`menu-bar ${showMerch ? "visible" : "hidden"}`}>
       <ul className="merchandising">
@@ -23,6 +23,39 @@ function MenuBar <MenuBarProps> ({ showMerch }) {
   );
 };
 
+function ChatBox() {
+  const [messages, setMessages] = useState<string[]>([]);
+  const [currentMessage, setCurrentMessage] = useState<string>("");
+
+  const sendMessage = () => {
+    if (currentMessage.trim() !== "") {
+      setMessages((prevMessages) => [...prevMessages, currentMessage]);
+      setCurrentMessage(""); // Reset the input after sending
+    }
+  };
+
+  return (
+    <div className="chat-box">
+      <div className="chat-window">
+        {messages.map((message, index) => (
+          <div key={index} className={`chat-bubble ${index % 2 === 0 ? "angel-bubble" : "demon-bubble"}`}>
+            <p>{message}</p>
+          </div>
+        ))}
+      </div>
+      <div className="chat-input">
+        <input 
+          type="text"
+          value={currentMessage}
+          onChange={(e) => setCurrentMessage(e.target.value)}
+          placeholder="Parle comme un ange ou un démon..." 
+        />
+        <button onClick={sendMessage}>Envoyer</button>
+      </div>
+    </div>
+  );
+}
+
 function HomePage() {
   const [showMerch, setShowMerch] = useState<boolean>(false);
 
@@ -31,7 +64,7 @@ function HomePage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-black text-white">
+    <div>
       <header>
         <img 
           className="logo-tecum" 
@@ -66,6 +99,9 @@ function HomePage() {
           </div>
         </div>
       </main>
+
+      {/* Zone de Chat Style Pokémon */}
+      <ChatBox />
 
       <footer className="footer flex flex-col items-center justify-between p-4 border-t border-gray-700">
         <div className="text-center mt-4">
