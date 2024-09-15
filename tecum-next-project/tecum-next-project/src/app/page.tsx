@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { FaSnapchat, FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
-import angelDemon from './assets/angeldemon.jpeg';  // Import direct de l'image
+import angelDemon from './assets/angeldemon.jpeg';  
 import './page.scss';
 
 interface MenuBarProps {
