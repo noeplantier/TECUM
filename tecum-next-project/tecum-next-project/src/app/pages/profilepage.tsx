@@ -1,6 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
+import './profilepage.scss';
+
+
 
 const ProfilePage: React.FC = () => {
   const [formData, setFormData] = useState({

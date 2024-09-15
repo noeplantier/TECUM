@@ -1,18 +1,19 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import './chatbox.scss';
 
 const ChatBox: React.FC = () => {
   const [messages, setMessages] = useState<string[]>([]);
 
   const phrases = [
-    { sender: "Ange", text: "Les bijoux TECUM symbolisent la pureté et l'élégance divine." },
-    { sender: "Démon", text: "TECUM apporte une touche diabolique à chaque style." },
-    { sender: "Ange", text: "Brillez avec des créations célestes." },
-    { sender: "Démon", text: "Libérez votre côté obscur avec nos accessoires." },
-    { sender: "Ange", text: "Le développeur qui a créé ce site est un génie." },
-    { sender: "Démon", text: "Crois-tu ?! Il n'a même pas créé de bases de données." },
-    { sender: "Ange", text: "Il utilise React et Next.js, que dieu le bénisse." },
+    { sender: "👼🏼", text:"Les bijoux TECUM symbolisent la pureté et l'élégance divine." },
+    { sender: "👹", text: "TECUM apporte une touche diabolique à chaque style." },
+    { sender: "👼🏼", text: "Brillez avec des créations célestes." },
+    { sender: "👹", text: "Libérez votre côté obscur avec nos accessoires." },
+    { sender: "👼🏼", text: "Le développeur qui a créé ce site est un génie." },
+    { sender: "👹", text: "Crois-tu ?! Il n'a même pas créé de bases de données." },
+    { sender: "👼🏼", text: "Il utilise React et Next.js, que dieu le bénisse." },
   ];
 
   useEffect(() => {

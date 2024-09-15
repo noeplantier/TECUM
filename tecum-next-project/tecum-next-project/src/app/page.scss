@@ -1,155 +1,74 @@
- @import url('https://fonts.cdnfonts.com/css/dusk-demon');
-           
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); // Police rétro Nintendo
+@import url('https://fonts.cdnfonts.com/css/dusk-demon'); // Police pour le titre
 
 body {
-  font-size: 3rem;
+  background-color: #000;
+  color: #f6f6f6;
   font-family: 'Arial', sans-serif;
-}
-
-.min-h-screen {
-  min-height: 100vh;
 }
 
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  background-color: #f0f0f0; /* Fond gris clair comme demandé */
+  align-items: center;
+  background-color: #333;
+  padding-bottom: -5rem;
+  padding-top: -5rem;
 
-  .logo-tecum {
-    margin-right: 1rem;
-    width: 50px; /* Ajuste la taille du logo si nécessaire */
-    height: auto;
-  }
-
-  .buttons {
-    margin-left: 1rem;
-    font-size: medium;
-    color: #f6f6f6;
-    background-color: #ed0808;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    &:hover {
-      background-color: #ddd;
-    }
-  }
 }
 
+.logo-tecum {
+  width: 50px;
+  cursor: pointer;
+}
 
 h1 {
-  margin-bottom: -3rem;
-  margin-top: -3rem;
-  color: hsl(0, 93%, 48%);
-  font-size: 10rem;
+  padding-bottom: -5rem;
+  padding-top: -5rem;
   text-align: center;
-  font-family: 'Dusk Demon 3D Italic', sans-serif; }
-
-
-
-.social-medias {
-  display: flex; /* Alignement des icônes en ligne */
-  justify-content: center;
-  gap: 1rem; /* Espace entre les icônes */
+  font-family: 'Dusk Demon 3D Italic', sans-serif;
+  font-size: 13rem;
+  color: #00aaff; 
 }
 
-.merchandising {
-  display: none; /* Masque la barre de navigation par défaut */
-  justify-items: center;
-  font-size: medium;
-}
-
-.merchandising.visible {
-  display: inline-block; /* Rend la MenuBar visible lors du clic sur le logo */
-}
-
-
-.dialogue-box {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-    .speech-bubble {
-      background: #fff;
-      border: 2px solid #000;
-      width: 200vh;
-      height: auto;
-      border-radius: 10px;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      text-align: center;
-      font-size: 2rem;
-      font-family: 'Dusk Demon', sans-serif; 
-       max-width: 200px;
-    }
-  
-
-
-.chat-box {
-  width: 100%;
-  background-color: black;
-  border: 2px solid #ffcb05;
+.buttons {
+  background-color: #00aaff; 
+  color: #fff;
+  border-radius: 10px;
   padding: 10px;
-  margin-top: 20px;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
 
-  .chat-window {
-    height: 150px;
-    overflow-y: scroll;
-    background-color: #f5f5f5;
-    padding: 10px;
-    border: 2px solid #333;
-  }
-
-  .chat-bubble {
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 10px;
-    font-family: 'PixelatedFont', sans-serif;
-    background-color: white;
-  }
-
-  .angel-bubble {
-    background-color: lightblue;
-    text-align: left;
-  }
-
-  .demon-bubble {
-    background-color: darkred;
-    text-align: right;
-  }
-
-  .chat-input {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-
-    input {
-      width: 80%;
-      padding: 5px;
-      font-size:x-large;
-      font-family: 'PixelatedFont', sans-serif;
-      border: 2px solid #ffcb05;
-      background-color: black;
-      color: white;
-    }
-
-    button {
-      font-size: x-large;
-      width: 18%;
-      background-color: #ffcb05;
-      color: black;
-      padding: 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+  &:hover {
+    background-color: #ddd;
+    color: #000;
   }
 }
 
-.footer {
-  color: white;
-  justify-content: end;
-  padding: 3rem;
+.menu-bar {
+  background-color: #111;
+  padding: 10px;
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+}
+
+footer {
+  background-color: #333;
+  color: #f6f6f6;
   text-align: center;
-  font-size: 1rem;
- background: #555;
+  padding: 20px;
+}
+
+.social-medias a {
+  display:flexbox;
+  margin: 0 10px;
+  color: #fff;
+
+  &:hover {
+    color: #aaa;
+  }
 }

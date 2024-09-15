@@ -95,16 +95,14 @@ function HomePage() {
             <h2>Demon</h2>
             <img src={demonImage} alt="Demon" className="character" />
             <div className="speech-bubble">
-              {/* Ajout de dialogue ou autres éléments si nécessaire */}
+              
             </div>
           </div>
         </div>
       </main>
 
-      {/* ChatBox entre l'ange et le démon */}
       <ChatBox />
 
-      {/* Footer avec mentions légales et réseaux sociaux */}
       <footer className="footer flex flex-col items-center justify-between p-4 border-t border-gray-700">
         <div className="text-center mt-4">
           <p>Mentions légales</p>

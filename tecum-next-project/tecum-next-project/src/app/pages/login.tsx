@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import './login.scss';
 
 interface LoginModalProps {
   onClose: () => void;
