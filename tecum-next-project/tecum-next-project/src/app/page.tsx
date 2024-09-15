@@ -1,6 +1,6 @@
-"use client";  
+"use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaSnapchat, FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
 import angelDemon from './assets/angeldemon.jpeg';  // Import direct de l'image
 import './page.scss';
@@ -25,14 +25,21 @@ function MenuBar<MenuBarProps>({ showMerch }) {
 
 function ChatBox() {
   const [messages, setMessages] = useState<string[]>([]);
-  const [currentMessage, setCurrentMessage] = useState<string>("");
 
-  const sendMessage = () => {
-    if (currentMessage.trim() !== "") {
-      setMessages((prevMessages) => [...prevMessages, currentMessage]);
-      setCurrentMessage(""); // Reset the input after sending
-    }
-  };
+  const phrases = [
+    { sender: "Ange", text: "Les bijoux TECUM symbolisent la pureté et l'élégance divine." },
+    { sender: "Démon", text: "TECUM apporte une touche diabolique à chaque style." },
+    { sender: "Ange", text: "Brillez avec des créations célestes." },
+    { sender: "Démon", text: "Libérez votre côté obscur avec nos accessoires." },
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const nextMessage = phrases[messages.length % phrases.length];
+      setMessages((prevMessages) => [...prevMessages, `${nextMessage.sender}: ${nextMessage.text}`]);
+    }, 3000); // Envoie un message toutes les 3 secondes
+    return () => clearInterval(interval);
+  }, [messages]);
 
   return (
     <div className="chat-box">
@@ -42,15 +49,6 @@ function ChatBox() {
             <p>{message}</p>
           </div>
         ))}
-      </div>
-      <div className="chat-input">
-        <input 
-          type="text"
-          value={currentMessage}
-          onChange={(e) => setCurrentMessage(e.target.value)}
-          placeholder="Parle comme un ange ou un démon..." 
-        />
-        <button onClick={sendMessage}>Envoyer</button>
       </div>
     </div>
   );
@@ -68,12 +66,11 @@ function HomePage() {
       <header>
         <img 
           className="logo-tecum" 
-          src={angelDemon}
-          alt="Logo Tecum" 
+          src={angelDemon} 
+          alt="Logo Tecum"
           onClick={handleLogoClick}
         />
-
-        <h1 className="text-2xl font-bold mr-auto">TECUM</h1>
+        <h1>TECUM</h1>
         <div>
           <button className="buttons">Connexion</button>
           <button className="buttons">Inscription</button>
@@ -83,7 +80,8 @@ function HomePage() {
       {/* Barre de Navigation */}
       <MenuBar showMerch={showMerch} />
 
-      <main >
+      <main>
+        {/* Dialogue entre ange et démon */}
         <div className="dialogue-box">
           <div className="angel">
             <img src="./assets/angel.png" alt="Angel"/>
@@ -100,7 +98,7 @@ function HomePage() {
         </div>
       </main>
 
-   
+      {/* ChatBox automatisé */}
       <ChatBox />
 
       <footer className="footer flex flex-col items-center justify-between p-4 border-t border-gray-700">
@@ -125,6 +123,6 @@ function HomePage() {
       </footer>
     </div>
   );
-};
+}
 
 export default HomePage;
