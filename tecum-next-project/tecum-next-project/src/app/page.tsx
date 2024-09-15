@@ -1,64 +1,45 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaSnapchat, FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
 import angelDemon from './assets/angeldemon.jpeg';  
 import './page.scss';
-
-interface MenuBarProps {
-  showMerch: boolean;
-}
-
-function MenuBar<MenuBarProps>({ showMerch }) {
-  return (
-    <nav className={`menu-bar ${showMerch ? "visible" : "hidden"}`}>
-      <ul className="merchandising">
-        <li><a href="#" className="hover:text-gray-200">Bagues</a></li>
-        <li><a href="#" className="hover:text-gray-200">Colliers</a></li>
-        <li><a href="#" className="hover:text-gray-200">Bracelets</a></li>
-        <li><a href="#" className="hover:text-gray-200">Accessoires</a></li>
-        <li><a href="#" className="hover:text-gray-200">À propos de nous</a></li>
-      </ul>
-    </nav>
-  );
-};
-
-function ChatBox() {
-  const [messages, setMessages] = useState<string[]>([]);
-
-  const phrases = [
-    { sender: "Ange", text: "Les bijoux TECUM symbolisent la pureté et l'élégance divine." },
-    { sender: "Démon", text: "TECUM apporte une touche diabolique à chaque style." },
-    { sender: "Ange", text: "Brillez avec des créations célestes." },
-    { sender: "Démon", text: "Libérez votre côté obscur avec nos accessoires." },
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const nextMessage = phrases[messages.length % phrases.length];
-      setMessages((prevMessages) => [...prevMessages, `${nextMessage.sender}: ${nextMessage.text}`]);
-    }, 3000); // Envoie un message toutes les 3 secondes
-    return () => clearInterval(interval);
-  }, [messages]);
-
-  return (
-    <div className="chat-box">
-      <div className="chat-window">
-        {messages.map((message, index) => (
-          <div key={index} className={`chat-bubble ${index % 2 === 0 ? "angel-bubble" : "demon-bubble"}`}>
-            <p>{message}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+import ProfilePage from "./pages/profilepage";
+import LoginModal from"./pages/login";
+import RegisterModal from "./pages/register";
+import ChatBox from "./pages/chatbox"; // Import du ChatBox
+import angelImage from './assets/angel.png'; // Image de l'ange
+import demonImage from './assets/demon.jpeg'; // Image du démon
 
 function HomePage() {
   const [showMerch, setShowMerch] = useState<boolean>(false);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [showLoginModal, setShowLoginModal] = useState<boolean>(false);
+  const [showRegisterModal, setShowRegisterModal] = useState<boolean>(false);
 
   const handleLogoClick = () => {
     setShowMerch(!showMerch);
+  };
+
+  const handleLoginClick = () => {
+    setShowLoginModal(true);
+  };
+
+  const handleRegisterClick = () => {
+    setShowRegisterModal(true);
+  };
+
+  const handleLogoutClick = () => {
+    setIsLoggedIn(false); 
+  };
+
+  const handleLoginSuccess = () => {
+    setIsLoggedIn(true); 
+    setShowLoginModal(false);
+  };
+
+  const handleRegisterSuccess = () => {
+    setShowRegisterModal(false); 
   };
 
   return (
@@ -72,35 +53,58 @@ function HomePage() {
         />
         <h1>TECUM</h1>
         <div>
-          <button className="buttons">Connexion</button>
-          <button className="buttons">Inscription</button>
+          {!isLoggedIn ? (
+            <>
+              <button className="buttons" onClick={handleLoginClick}>Connexion</button>
+              <button className="buttons" onClick={handleRegisterClick}>Inscription</button>
+            </>
+          ) : (
+            <>
+              <button className="buttons" onClick={handleLogoutClick}>Déconnexion</button>
+              <button className="buttons">Profil</button>
+            </>
+          )}
         </div>
       </header>
 
-      {/* Barre de Navigation */}
-      <MenuBar showMerch={showMerch} />
+      {/* Affichage des modales */}
+      {showLoginModal && (
+        <LoginModal onClose={() => setShowLoginModal(false)} onLoginSuccess={handleLoginSuccess} />
+      )}
+      {showRegisterModal && (
+        <RegisterModal onClose={() => setShowRegisterModal(false)} onRegisterSuccess={handleRegisterSuccess} />
+      )}
 
+      {/* Affichage conditionnel de la page profil */}
+      {isLoggedIn && <ProfilePage />}
+
+      {/* Dialogue entre l'ange et le démon */}
       <main>
-        {/* Dialogue entre ange et démon */}
         <div className="dialogue-box">
           <div className="angel">
-            <img src="./assets/angel.png" alt="Angel"/>
-            <div className="speech-bubble">
-              <h2>"Pourquoi es-tu ici, démon ?"</h2>
+            <h2>Angel</h2>
+            <img src={angelImage} alt="Angel" className="character" />
+            <div className="jewellery-items">
+              <img src="./assets/earings1.jpeg" alt="Angel Jewellery" />
+              <img src="./assets/necklace1.jpeg" alt="Angel Necklace" />
+              <img src="./assets/rings1.jpeg" alt="Angel Rings" />
             </div>
           </div>
+          
           <div className="demon">
-            <img src="./assets/demon.jpeg" alt="Demon" className="character"/>
+            <h2>Demon</h2>
+            <img src={demonImage} alt="Demon" className="character" />
             <div className="speech-bubble">
-              <h2>"Je suis ici pour les bijoux TECUM..."</h2>
+              {/* Ajout de dialogue ou autres éléments si nécessaire */}
             </div>
           </div>
         </div>
       </main>
 
-      {/* ChatBox automatisé */}
+      {/* ChatBox entre l'ange et le démon */}
       <ChatBox />
 
+      {/* Footer avec mentions légales et réseaux sociaux */}
       <footer className="footer flex flex-col items-center justify-between p-4 border-t border-gray-700">
         <div className="text-center mt-4">
           <p>Mentions légales</p>

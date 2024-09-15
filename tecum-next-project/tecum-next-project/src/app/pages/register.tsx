@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import './Register.scss';
 
 const Register: React.FC = () => {
   const [formData, setFormData] = useState({
