@@ -2,14 +2,12 @@
 
 import React, { useState } from "react";
 import { FaSnapchat, FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
-import angelDemon from './assets/angeldemon.jpeg';  
 import './page.scss';
 import ProfilePage from "./pages/profilepage";
 import LoginModal from"./pages/login";
 import RegisterModal from "./pages/register";
-import ChatBox from "./pages/chatbox"; // Import du ChatBox
-import angelImage from './assets/angel.png'; // Image de l'ange
-import demonImage from './assets/demon.jpeg'; // Image du démon
+import ChatBox from "./pages/chatbox"; 
+
 
 function HomePage() {
   const [showMerch, setShowMerch] = useState<boolean>(false);
@@ -47,10 +45,9 @@ function HomePage() {
       <header>
         <img 
           className="logo-tecum" 
-          src={angelDemon} 
+          src="https://files.oaiusercontent.com/file-yIM8lnksKpaaOddiPYnrX6sr?se=2024-09-18T14%3A09%3A03Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dd98b5c75-7967-45c4-9b71-0d7cb25bcc97.webp&sig=fyHXR3gXG096gzQQkjWQlEKodmwPk7N39643RF8Zl5k%3D"
           alt="Logo Tecum"
-          onClick={handleLogoClick}
-        />
+          onClick={handleLogoClick}/>
         <h1>TECUM</h1>
         <div>
           {!isLoggedIn ? (
@@ -75,25 +72,19 @@ function HomePage() {
         <RegisterModal onClose={() => setShowRegisterModal(false)} onRegisterSuccess={handleRegisterSuccess} />
       )}
 
-      {/* Affichage conditionnel de la page profil */}
       {isLoggedIn && <ProfilePage />}
 
-      {/* Dialogue entre l'ange et le démon */}
       <main>
         <div className="dialogue-box">
           <div className="angel">
-            <h2>Angel</h2>
-            <img src={angelImage} alt="Angel" className="character" />
-            <div className="jewellery-items">
-              <img src="./assets/earings1.jpeg" alt="Angel Jewellery" />
-              <img src="./assets/necklace1.jpeg" alt="Angel Necklace" />
-              <img src="./assets/rings1.jpeg" alt="Angel Rings" />
+            <img src="https://pnghq.com/wp-content/uploads/san-miguel-arcangel-png-free-image-download-11664.png" id="angel" />
             </div>
+            <div className="jewellery-items">
+            
           </div>
           
           <div className="demon">
-            <h2>Demon</h2>
-            <img src={demonImage} alt="Demon" className="character" />
+            <img src="https://pngimg.com/d/demon_PNG26.png" id="demon"/>
             <div className="speech-bubble">
               
             </div>

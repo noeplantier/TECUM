@@ -4,9 +4,9 @@
 
 body {
   background: url('https://cdn.pixabay.com/photo/2015/04/23/12/32/hell-735995_1280.jpg') ;
-  background-size: cover; // Permet à l'image de couvrir tout l'écran
-  background-repeat: no-repeat; // Empêche la répétition de l'image
-  background-position:bottom;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position:top;
   image-rendering:pixelated;
   image-rendering: crisp-edges;
   color: #f6f6f6;
@@ -16,7 +16,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: self-end;
   background-color: #333;
   margin-bottom: -1rem;
   padding-top: 0rem;
@@ -25,14 +25,16 @@ body {
 }
 
 .logo-tecum {
-  width: 50px;
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%; 
+  object-fit: cover; 
   cursor: pointer;
-  background-image: url('https://files.oaiusercontent.com/file-yIM8lnksKpaaOddiPYnrX6sr?se=2024-09-18T14%3A09%3A03Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dd98b5c75-7967-45c4-9b71-0d7cb25bcc97.webp&sig=fyHXR3gXG096gzQQkjWQlEKodmwPk7N39643RF8Zl5k%3D');
 }
 
 h1 {
   margin-bottom:6rem;
-  margin-top: -5rem;
+  margin-top: -10rem;
   margin-left: 26rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 10rem;
@@ -65,8 +67,8 @@ h1 {
 }
 
 footer {
-  margin-bottom: 0;
-  margin-top: 5rem;
+  background: fixed;
+  background-size: cover;
   background-color: #333;
   color: #f6f6f6;
   text-align: center;
@@ -79,6 +81,6 @@ footer {
   color: #fff;
 
   &:hover {
-    color: #aaa;
+    color: #730b0b;
   }
 }
