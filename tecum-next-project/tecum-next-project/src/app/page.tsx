@@ -4,10 +4,9 @@ import React, { useState } from "react";
 import { FaSnapchat, FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
 import './page.scss';
 import ProfilePage from "./pages/profilepage";
-import LoginModal from"./pages/login";
+import LoginModal from "./pages/login";
 import RegisterModal from "./pages/register";
 import ChatBox from "./pages/chatbox"; 
-
 
 function HomePage() {
   const [showMerch, setShowMerch] = useState<boolean>(false);
@@ -28,7 +27,7 @@ function HomePage() {
   };
 
   const handleLogoutClick = () => {
-    setIsLoggedIn(false); 
+    setIsLoggedIn(false);
   };
 
   const handleLoginSuccess = () => {
@@ -47,9 +46,10 @@ function HomePage() {
           className="logo-tecum" 
           src="https://files.oaiusercontent.com/file-yIM8lnksKpaaOddiPYnrX6sr?se=2024-09-18T14%3A09%3A03Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dd98b5c75-7967-45c4-9b71-0d7cb25bcc97.webp&sig=fyHXR3gXG096gzQQkjWQlEKodmwPk7N39643RF8Zl5k%3D"
           alt="Logo Tecum"
-          onClick={handleLogoClick}/>
+          onClick={handleLogoClick}
+        />
         <h1>TECUM</h1>
-        <div>
+        <div className="auth-buttons">
           {!isLoggedIn ? (
             <>
               <button className="buttons" onClick={handleLoginClick}>Connexion</button>
@@ -64,7 +64,6 @@ function HomePage() {
         </div>
       </header>
 
-      {/* Affichage des modales */}
       {showLoginModal && (
         <LoginModal onClose={() => setShowLoginModal(false)} onLoginSuccess={handleLoginSuccess} />
       )}
@@ -78,16 +77,10 @@ function HomePage() {
         <div className="dialogue-box">
           <div className="angel">
             <img src="https://pnghq.com/wp-content/uploads/san-miguel-arcangel-png-free-image-download-11664.png" id="angel" />
-            </div>
-            <div className="jewellery-items">
-            
           </div>
           
           <div className="demon">
             <img src="https://pngimg.com/d/demon_PNG26.png" id="demon"/>
-            <div className="speech-bubble">
-              
-            </div>
           </div>
         </div>
       </main>

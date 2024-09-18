@@ -1,27 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); 
 @import url('https://fonts.cdnfonts.com/css/dusk-demon'); 
 
-
 body {
-  background: url('https://cdn.pixabay.com/photo/2015/04/23/12/32/hell-735995_1280.jpg') ;
+  background: url('https://cdn.pixabay.com/photo/2015/04/23/12/32/hell-735995_1280.jpg') center center;
   background-size: cover;
-  background-repeat: no-repeat; 
-  background-position:top;
-  image-rendering:pixelated;
-  image-rendering: crisp-edges;
   color: #f6f6f6;
   font-family: 'Arial', sans-serif;
+  height: 100vh;
 }
 
-.header {
+header {
   display: flex;
   justify-content: space-between;
-  align-items: self-end;
-  background-color: #333;
-  margin-bottom: -1rem;
-  padding-top: 0rem;
-
-
+  align-items: flex-start;
+  background-color: transparent;
+  padding: 10px 20px;
 }
 
 .logo-tecum {
@@ -33,22 +26,28 @@ body {
 }
 
 h1 {
-  margin-bottom:6rem;
-  margin-top: -10rem;
-  margin-left: 26rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  align-items: end;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
   font-size: 10rem;
-  color: #ffffff; 
+  color: #ffffff;
+  margin-bottom: 30rem;
+  margin-top: -2rem;
+  margin-left: 15rem;
+}
+
+.auth-buttons {
+  margin-left: auto;
 }
 
 .buttons {
-  background-color: #00aaff; 
+  background-color: lightblue;
   color: #fff;
   border-radius: 10px;
-  padding: 10px;
-  margin-left: 1rem;
+  padding: 5px 10px;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-right: 10px;
 
   &:hover {
     background-color: #ddd;
@@ -56,27 +55,50 @@ h1 {
   }
 }
 
-.menu-bar {
-  background-color: #111;
-  padding: 10px;
-  display: none;
+.dialogue-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
 
-  &.visible {
-    display: block;
+.angel, .demon {
+  animation: move 2s infinite alternate;
+}
+
+#angel {
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  right: -15rem;
+  top:-28rem;
+}
+
+#demon {
+  width: 400px;
+  height: 350px;
+  position: absolute;
+  left: -22rem;
+  top:-25rem;
+
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
   }
 }
 
 footer {
-  background: fixed;
-  background-size: cover;
   background-color: #333;
   color: #f6f6f6;
+  padding: 40px;
   text-align: center;
-  padding: 4rem;
 }
 
 .social-medias a {
-  display:flexbox;
   margin: 0 10px;
   color: #fff;
 
