@@ -14,6 +14,7 @@ const ChatBox: React.FC = () => {
     { sender: "👼🏼", text: "Le développeur qui a créé ce site est un génie." },
     { sender: "👹", text: "Crois-tu ?! Il n'a même pas créé de bases de données." },
     { sender: "👼🏼", text: "Il utilise React et Next.js, que dieu le bénisse." },
+    { sender: "👹", text: "Au diable les frameworks JavaScript." },
   ];
 
   useEffect(() => {

@@ -1,8 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); // Police rétro Nintendo
-@import url('https://fonts.cdnfonts.com/css/dusk-demon'); // Police pour le titre
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); 
+@import url('https://fonts.cdnfonts.com/css/dusk-demon'); 
+
 
 body {
-  background-color: #000;
+  background: url('https://cdn.pixabay.com/photo/2015/04/23/12/32/hell-735995_1280.jpg') ;
+  background-size: cover; // Permet à l'image de couvrir tout l'écran
+  background-repeat: no-repeat; // Empêche la répétition de l'image
+  background-position:bottom;
+  image-rendering:pixelated;
+  image-rendering: crisp-edges;
   color: #f6f6f6;
   font-family: 'Arial', sans-serif;
 }
@@ -21,15 +27,16 @@ body {
 .logo-tecum {
   width: 50px;
   cursor: pointer;
+  background-image: url('https://files.oaiusercontent.com/file-yIM8lnksKpaaOddiPYnrX6sr?se=2024-09-18T14%3A09%3A03Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dd98b5c75-7967-45c4-9b71-0d7cb25bcc97.webp&sig=fyHXR3gXG096gzQQkjWQlEKodmwPk7N39643RF8Zl5k%3D');
 }
 
 h1 {
   margin-bottom:6rem;
-  margin-top:0.1rem;
+  margin-top: -5rem;
   margin-left: 26rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 10rem;
-  color: #00aaff; 
+  color: #ffffff; 
 }
 
 .buttons {
@@ -58,10 +65,12 @@ h1 {
 }
 
 footer {
+  margin-bottom: 0;
+  margin-top: 5rem;
   background-color: #333;
   color: #f6f6f6;
   text-align: center;
-  padding: 20px;
+  padding: 4rem;
 }
 
 .social-medias a {
