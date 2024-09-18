@@ -7,6 +7,8 @@ import ProfilePage from "./pages/profilepage";
 import LoginModal from "./pages/login";
 import RegisterModal from "./pages/register";
 import ChatBox from "./pages/chatbox"; 
+import './page.scss';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
   const [showMerch, setShowMerch] = useState<boolean>(false);
@@ -15,6 +17,7 @@ function HomePage() {
   const [showRegisterModal, setShowRegisterModal] = useState<boolean>(false);
 
   const handleLogoClick = () => {
+    
     setShowMerch(!showMerch);
   };
 
@@ -49,6 +52,7 @@ function HomePage() {
           onClick={handleLogoClick}
         />
         <h1>TECUM</h1>
+        
         <div className="auth-buttons">
           {!isLoggedIn ? (
             <>
