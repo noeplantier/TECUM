@@ -3,8 +3,12 @@
 import React, { useState } from "react";
 import './register.scss';
 
+interface RegisterModalProps {
+  onClose: () => void;
+  onRegisterSuccess: () => void;
+}
 
-const Register: React.FC = () => {
+const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onRegisterSuccess }) => {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -22,34 +26,68 @@ const Register: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Logique de validation et envoi des données pour inscription
+    // Validation de l'inscription
+    if (formData.password !== formData.confirmPassword) {
+      alert("Les mots de passe ne correspondent pas.");
+      return;
+    }
+
+    // Logique d'enregistrement ici
     console.log("User registered:", formData);
+    onRegisterSuccess(); // Appeler cette fonction après une inscription réussie
   };
 
   return (
-    <div className="register-container">
-      <h2>S'inscrire à TECUM</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="input-field">
-          <label>Nom d'utilisateur</label>
-          <input type="text" name="username" value={formData.username} onChange={handleChange} required />
-        </div>
-        <div className="input-field">
-          <label>Email</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-        </div>
-        <div className="input-field">
-          <label>Mot de passe</label>
-          <input type="password" name="password" value={formData.password} onChange={handleChange} required />
-        </div>
-        <div className="input-field">
-          <label>Confirmer le mot de passe</label>
-          <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} required />
-        </div>
-        <button type="submit" className="register-button">S'inscrire</button>
-      </form>
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="register-modal" onClick={(e) => e.stopPropagation()}>
+        <h2>Inscription à TECUM</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="input-field">
+            <label>Nom d'utilisateur</label>
+            <input
+              type="text"
+              name="username"
+              value={formData.username}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="input-field">
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="input-field">
+            <label>Mot de passe</label>
+            <input
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="input-field">
+            <label>Confirmer le mot de passe</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <button type="submit" className="register-button">S'inscrire</button>
+          <button type="button" onClick={onClose} className="close-button">Fermer</button>
+        </form>
+      </div>
     </div>
   );
 };
 
-export default Register;
+export default RegisterModal;

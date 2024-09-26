@@ -3,12 +3,11 @@
 import React, { useState } from "react";
 import { FaSnapchat, FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
 import './page.scss';
-import ProfilePage from "./pages/profilepage";
+import Profile from "./pages/profile";
 import LoginModal from "./pages/login";
 import RegisterModal from "./pages/register";
 import ChatBox from "./pages/chatbox"; 
 import './page.scss';
-import { Link } from 'react-router-dom';
 
 function HomePage() {
   const [showMerch, setShowMerch] = useState<boolean>(false);
@@ -42,6 +41,10 @@ function HomePage() {
     setShowRegisterModal(false); 
   };
 
+  function toggleProfileModal(event: MouseEvent<HTMLButtonElement, MouseEvent>): void {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <div>
       <header>
@@ -62,7 +65,8 @@ function HomePage() {
           ) : (
             <>
               <button className="buttons" onClick={handleLogoutClick}>Déconnexion</button>
-              <button className="buttons">Profil</button>
+              <button className="buttons" onClick={toggleProfileModal} >Profil
+      </button>
             </>
           )}
         </div>
@@ -75,7 +79,11 @@ function HomePage() {
         <RegisterModal onClose={() => setShowRegisterModal(false)} onRegisterSuccess={handleRegisterSuccess} />
       )}
 
-      {isLoggedIn && <ProfilePage />}
+      {isLoggedIn && <Profile user={{
+        username: "",
+        email: "",
+        imageUrl: ""
+      }} />}
 
       <main>
         <div className="dialogue-box">

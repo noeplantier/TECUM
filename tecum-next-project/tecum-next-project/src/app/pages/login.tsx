@@ -30,8 +30,8 @@ const LoginModal: React.FC<LoginModalProps> = ({ onClose, onLoginSuccess }) => {
   };
 
   return (
-    <div className="modal-overlay">
-      <div className="login-modal">
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="login-modal" onClick={(e) => e.stopPropagation()}>
         <h2>Connexion à TECUM</h2>
         <form onSubmit={handleSubmit}>
           <div className="input-field">
