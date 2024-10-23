@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.cdnfonts.com/css/dusk-demon');
+
+.tecum-footer {
+  background-color: #222;
+  color: #f6f6f6;
+  padding: 3rem;
+  margin-top: 5rem;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .brand-info, .social-medias, .contact-info {
+      margin-bottom: 1rem;
+
+      h2, h3 {
+        color: #ffc229;
+        font-family: 'Dusk Demon', sans-serif;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        line-height: 1.2;
+      }
+    }
+
+    .social-medias a {
+      margin: 0 10px;
+      transition: color 0.3s ease;
+
+      img {
+        width: 40px;
+        height: 40px;
+        filter: brightness(0) invert(1);
+      }
+
+      &:hover img {
+        filter: brightness(1) hue-rotate(200deg);
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #888;
+  }
+}

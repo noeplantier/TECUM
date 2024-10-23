@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: transparent;
+    padding: 10px 20px;
+  }
+  
+  .logo-tecum {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    cursor: pointer;
+  }
+  
+  h1 {
+    align-items: end;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 11rem;
+    color: #ffffff;
+    margin-bottom: 50rem;
+    margin-top: -2rem;
+    margin-left: 8rem;
+  }
+  
+  
+  
+  .buttons {
+    background-color: lightblue;
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-left: 5px;
+    margin-right: 5px;
+  
+    &:hover {
+      background: url('https://t4.ftcdn.net/jpg/02/03/27/53/360_F_203275317_FjB3VUNQ085ja7opvp27ue0pViq1bAIg.jpg') center center;
+  
+      
+    }
+  }
+  

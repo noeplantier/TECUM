@@ -3,11 +3,12 @@
 import React, { useState } from "react";
 import { FaSnapchat, FaInstagram, FaFacebook, FaPinterest } from "react-icons/fa";
 import './page.scss';
-import Profile from "./pages/profile";
-import LoginModal from "./pages/login";
-import RegisterModal from "./pages/register";
-import ChatBox from "./pages/chatbox"; 
+import Profile from "./pages/Profile/profile";
+import LoginModal from "./pages/Login/login";
+import RegisterModal from "./pages/Register/register";
+import ChatBox from "./pages/ChatBox/chatbox"; 
 import './page.scss';
+import Footer from "./layouts/Footer";
 
 function HomePage() {
   const [showMerch, setShowMerch] = useState<boolean>(false);
@@ -48,29 +49,29 @@ function HomePage() {
   return (
     <div>
       <header>
-        <img 
-          className="logo-tecum" 
-          src="https://files.oaiusercontent.com/file-yIM8lnksKpaaOddiPYnrX6sr?se=2024-09-18T14%3A09%3A03Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dd98b5c75-7967-45c4-9b71-0d7cb25bcc97.webp&sig=fyHXR3gXG096gzQQkjWQlEKodmwPk7N39643RF8Zl5k%3D"
-          alt="Logo Tecum"
-          onClick={handleLogoClick}
-        />
-        <h1>TECUM</h1>
-        
-        <div className="auth-buttons">
-          {!isLoggedIn ? (
-            <>
-              <button className="buttons" onClick={handleLoginClick}>Connexion</button>
-              <button className="buttons" onClick={handleRegisterClick}>Inscription</button>
-            </>
-          ) : (
-            <>
-              <button className="buttons" onClick={handleLogoutClick}>Déconnexion</button>
-              <button className="buttons" onClick={toggleProfileModal} >Profil
-      </button>
-            </>
-          )}
-        </div>
-      </header>
+  <img 
+    className="logo-tecum" 
+    src="/images/DALL·E 2024-10-23 12.38.23 - A circular logo for the TECUM website, featuring a fusion of an angel and a demon. The design should have a split down the middle, with one side repre.webp"  // Remplace avec le nom exact du fichier
+    alt="Logo Tecum"
+    onClick={handleLogoClick}
+  />
+  <h1>TECUM</h1>
+  
+  <div className="auth-buttons">
+    {!isLoggedIn ? (
+      <>
+        <button className="buttons" onClick={handleLoginClick}>Connexion</button>
+        <button className="buttons" onClick={handleRegisterClick}>Inscription</button>
+      </>
+    ) : (
+      <>
+        <button className="buttons" onClick={handleLogoutClick}>Déconnexion</button>
+        <button className="buttons" onClick={toggleProfileModal}>Profil</button>
+      </>
+    )}
+  </div>
+</header>
+
 
       {showLoginModal && (
         <LoginModal onClose={() => setShowLoginModal(false)} onLoginSuccess={handleLoginSuccess} />
@@ -94,31 +95,12 @@ function HomePage() {
           <div className="demon">
             <img src="https://pngimg.com/d/demon_PNG26.png" id="demon"/>
           </div>
-        </div>
+        </div>      
       </main>
 
-      <ChatBox />
 
-      <footer className="footer flex flex-col items-center justify-between p-4 border-t border-gray-700">
-        <div className="text-center mt-4">
-          <p>Mentions légales</p>
-          <p>&copy; 2024 TECUM. Tous droits réservés.</p>
-        </div>
-        <div className="social-medias">
-          <a href="https://www.snapchat.com" target="_blank" rel="noopener noreferrer">
-            <FaSnapchat size={24} />
-          </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <FaInstagram size={24} />
-          </a>
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-            <FaFacebook size={24} />
-          </a>
-          <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer">
-            <FaPinterest size={24} />
-          </a>
-        </div>
-      </footer>
+    <ChatBox/>
+    <Footer/>
     </div>
   );
 }
