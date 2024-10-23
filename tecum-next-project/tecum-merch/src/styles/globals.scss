@@ -1,0 +1,20 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial, sans-serif';
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .products {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+  }
+  
