@@ -5,6 +5,7 @@
   justify-content: center;
   text-align: center;
   color: #fff;
+  overflow: hidden; /* Pour éviter tout débordement des images */
 
   .hero-content {
     max-width: 600px;
@@ -39,9 +40,8 @@
 
   .image-container {
     display: flex;
-    width: 300vh;
+    width: 600vh;
     height: 100vh;
-    margin-top: 2rem;
   }
 
   .clemdetrem1,
@@ -49,19 +49,17 @@
     flex: 1;
     background-size: cover;
     background-position: center;
-    margin: 0;
+    margin: 0; 
+    top:20rem;
   }
 
   .clemdetrem1 {
-    background-image: url('/images/clemdetrem1.jpg.webp'); // Remplacez avec l'URL de votre première image
-    background-position: bottom;
-
+    background-image: url('/images/clemdetrem1.jpg.webp'); /* Assurez-vous que l'image est en haute qualité */
+    background-position: bottom ;
   }
 
-
   .clemdetrem2 {
-    background-image: url('/images/clemdetrem2.png'); // Remplacez avec l'URL de votre seconde image
-    background-position:top;
-
+    background-image: url('/images/clemdetrem2.png'); /* Assurez-vous que l'image est en haute qualité */
+    background-position: top;
   }
 }

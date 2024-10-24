@@ -12,7 +12,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer">
+    <footer className="footer" id="footer">
       <div className="footer__top">
         <div className="footer__links">
           <a href="/shop">Shop</a>
