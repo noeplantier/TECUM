@@ -7,12 +7,9 @@ import '../../styles/Blog.scss';
 const Blog = () => {
   return (
     <div className="blog-page">
-      <Header />
       <main>
         <h1>Latest Blog Posts</h1>
-        <BlogPosts />
       </main>
-      <Footer />
     </div>
   );
 };

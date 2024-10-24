@@ -7,7 +7,7 @@ import Image from 'next/image';
 const About = () => {
   return (
     <div className="about-page">
-      <Header />
+      <Header/>
       <main>
         <h1>About Us</h1>
         <p>Discover the story behind In Gold We Trust and our dedication to quality jewelry.</p>
@@ -18,7 +18,6 @@ const About = () => {
       
       />
       </main>
-      <Footer />
     </div>
   );
 };

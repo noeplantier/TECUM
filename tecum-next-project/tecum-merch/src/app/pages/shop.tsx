@@ -7,12 +7,10 @@ import '../../styles/Shop.scss';
 const Shop = () => {
   return (
     <div className="shop-page">
-      <Header />
       <main>
         <h1>Shop Our Collection</h1>
         <ProductGrid />
       </main>
-      <Footer />
     </div>
   );
 };

@@ -1,0 +1,95 @@
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20rem;
+    text-align: center;
+  
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #333;
+    }
+  
+    &__links {
+      display: flex;
+      gap: 1.5rem;
+  
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.3s;
+  
+        &:hover {
+          color: #ffc229;
+        }
+      }
+    }
+  
+    &__social {
+      display: flex;
+      gap: 1rem;
+  
+      a {
+        color: #fff;
+        font-size: 1.5rem;
+        transition: color 0.3s;
+  
+        &:hover {
+          color: #ffc229;
+        }
+      }
+    }
+  
+    &__bottom {
+      margin-top: 1rem;
+  
+      p {
+        font-size: 0.8rem;
+        color: #777;
+      }
+  
+      .footer__language-button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: color 0.3s;
+  
+        &:hover {
+          color: #ffc229;
+        }
+      }
+    }
+  }
+  
+  .language-modal {
+    background-color: #222;
+    padding: 1rem;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 5rem;
+    left: 40.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  
+    &__select {
+      width: 100%;
+      padding: 0.5rem;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+  
+      option {
+        background-color: #222;
+        color: #fff;
+      }
+    }
+  }
+  
