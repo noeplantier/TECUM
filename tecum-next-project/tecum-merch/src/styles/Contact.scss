@@ -1,0 +1,40 @@
+.contact-page {
+    padding: 3rem;
+    text-align: center;
+  
+    h1 {
+      font-size: 2.5rem;
+      color: #ffc229;
+    }
+  
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+  
+      input, textarea {
+        width: 80%;
+        max-width: 500px;
+        padding: 0.8rem;
+        margin: 0.5rem 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+  
+      button {
+        background-color: #000;
+        color: #ffc229;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #333;
+        }
+      }
+    }
+  }
+  

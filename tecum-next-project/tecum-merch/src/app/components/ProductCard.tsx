@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProductCard.scss';
+import '../../styles/ProductCard.scss';
 
 type ProductProps = {
   image: string;
