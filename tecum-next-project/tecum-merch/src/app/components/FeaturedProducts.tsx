@@ -28,21 +28,21 @@ const products = [
 
   // Ligne 5
   { id: 17, name: 'Amethyst Ring', price: '€275', image: '/images/Amethyst Ring.jpg.webp' },
-  { id: 18, name: 'Gold Hoop Earrings', price: '€120', image: '/images/product18.jpg' },
-  { id: 19, name: 'Silk Scarf', price: '€60', image: '/images/product19.jpg' },
-  { id: 20, name: 'Pearl Bracelet', price: '€200', image: '/images/product20.jpg' },
+  { id: 18, name: 'Gold Hoop Earrings', price: '€120', image: '/images/Gold Hoop Earrings.png.webp' },
+  { id: 19, name: 'Silk Scarf', price: '€60', image: '/images/Silk Scarf.jpg' },
+  { id: 20, name: 'Pearl Bracelet', price: '€200', image: '/images/Pearl Bracelet.jpg.webp' },
 
   // Ligne 6
-  { id: 21, name: 'Diamond Pendant', price: '€800', image: '/images/product21.jpg' },
-  { id: 22, name: 'Leather Handbag', price: '€550', image: '/images/product22.jpg' },
-  { id: 23, name: 'Silver Hairpin', price: '€40', image: '/images/product23.jpg' },
-  { id: 24, name: 'Velvet Choker', price: '€50', image: '/images/product24.jpg' },
+  { id: 21, name: 'Diamond Pendant', price: '€800', image: '/images/Diamond Pendant.jpg' },
+  { id: 22, name: 'Leather Handbag', price: '€550', image: '/images/Leather Handbag.jpg.webp' },
+  { id: 23, name: 'Silver Hairpin', price: '€40', image: '/images/Silver Hairpin.jpeg.webp' },
+  { id: 24, name: 'Velvet Choker', price: '€50', image: '/images/Velvet Choker.jpg.webp' },
 
   // Ligne 7
-  { id: 25, name: 'Gold-plated Sunglasses', price: '€300', image: '/images/product25.jpg' },
-  { id: 26, name: 'Beaded Necklace', price: '€85', image: '/images/product26.jpg' },
-  { id: 27, name: 'Crystal Earrings', price: '€65', image: '/images/product27.jpg' },
-  { id: 28, name: 'Platinum Tie Clip', price: '€95', image: '/images/product28.jpg' },
+  { id: 25, name: 'Gold-plated Sunglasses', price: '€300', image: '/images/Gold-plated Sunglasses.jpg.webp' },
+  { id: 26, name: 'Beaded Necklace', price: '€85', image: '/images/Beaded Necklace.jpg.webp' },
+  { id: 27, name: 'Crystal Earrings', price: '€65', image: '/images/Crystal Earrings.jpg' },
+  { id: 28, name: 'Platinum Tie Clip', price: '€95', image: '/images/Platinum Tie Clip.jpg' },
 ];
 
 const FeaturedProducts = () => {
