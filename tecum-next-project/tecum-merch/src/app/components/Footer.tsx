@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from 'react';
 import '../../styles/Footer.scss';
@@ -6,13 +6,25 @@ import { FaInstagram, FaFacebookF, FaTwitter, FaPinterestP, FaYoutube } from 're
 
 const Footer = () => {
   const [showLanguageModal, setShowLanguageModal] = useState(false);
+  const [email, setEmail] = useState('');
 
   const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     console.log(`Selected Language: ${event.target.value}`);
   };
 
+  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+  };
+
+  const handleSubscribe = () => {
+    if (email) {
+      console.log(`Subscribed with email: ${email}`);
+      setEmail('');
+    }
+  };
+
   return (
-    <footer className="footer" id="footer">
+    <footer className="footer" id='footer'>
       <div className="footer__top">
         <div className="footer__links">
           <a href="/shop">Shop</a>
@@ -37,6 +49,21 @@ const Footer = () => {
           <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
             <FaYoutube />
           </a>
+        </div>
+      </div>
+
+      <div className="footer__middle">
+        <h3>Get 10% Off Your First Order</h3>
+        <p>Subscribe to our newsletter and receive a 10% discount on your first purchase.</p>
+        <div className="footer__subscribe">
+          <input
+            type="email"
+            value={email}
+            onChange={handleEmailChange}
+            placeholder="Enter your email"
+            className="footer__input"
+          />
+          <button onClick={handleSubscribe} className="footer__subscribe-button">Subscribe</button>
         </div>
       </div>
 
