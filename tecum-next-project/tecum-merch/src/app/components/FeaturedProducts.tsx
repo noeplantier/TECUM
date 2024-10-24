@@ -3,22 +3,22 @@ import '../../styles/FeaturedProducts.scss';
 
 const products = [
   // Ligne 1
-  { id: 1, name: 'Gold Necklace', price: '€200', image: '/images/product1.jpg' },
-  { id: 2, name: 'Diamond Ring', price: '€500', image: '/images/product2.jpg' },
-  { id: 3, name: 'Silver Bracelet', price: '€150', image: '/images/product3.jpg' },
-  { id: 4, name: 'Emerald Earrings', price: '€100', image: '/images/product4.jpg' },
+  { id: 1, name: 'Gold Necklace', price: '€200', image: '/images/goldnecklace.webp' },
+  { id: 2, name: 'Diamond Ring', price: '€500', image: '/images/diamondring.jpg.webp' },
+  { id: 3, name: 'Silver Bracelet', price: '€150', image: '/images/silverbracelet.jpg' },
+  { id: 4, name: 'Emerald Earrings', price: '€100', image: '/images/Emerald Earrings.jpg.webp' },
   
   // Ligne 2
-  { id: 5, name: 'Pearl Pendant', price: '€250', image: '/images/product5.jpg' },
-  { id: 6, name: 'Sapphire Bracelet', price: '€300', image: '/images/product6.jpg' },
-  { id: 7, name: 'Leather Watch', price: '€180', image: '/images/product7.jpg' },
-  { id: 8, name: 'Ruby Necklace', price: '€450', image: '/images/product8.jpg' },
+  { id: 5, name: 'Pearl Pendant', price: '€250', image: '/images/Pearl Pendant.jpg' },
+  { id: 6, name: 'Sapphire Bracelet', price: '€300', image: '/images/Sapphire Bracelet.jpg.webp' },
+  { id: 7, name: 'Leather Watch', price: '€180', image: '/images/Leather Watch.jpg' },
+  { id: 8, name: 'Ruby Necklace', price: '€450', image: '/images/Ruby Necklace.jpg' },
 
   // Ligne 3
-  { id: 9, name: 'Gold Anklet', price: '€90', image: '/images/product9.jpg' },
-  { id: 10, name: 'Cubic Zirconia Ring', price: '€70', image: '/images/product10.jpg' },
-  { id: 11, name: 'Silver Cufflinks', price: '€110', image: '/images/product11.jpg' },
-  { id: 12, name: 'Platinum Chain', price: '€600', image: '/images/product12.jpg' },
+  { id: 9, name: 'Gold Anklet', price: '€90', image: '/images/Gold Anklet.jpeg.webp' },
+  { id: 10, name: 'Cubic Zirconia Ring', price: '€70', image: '/images/Cubic Zirconia Ring.webp' },
+  { id: 11, name: 'Silver Cufflinks', price: '€110', image: '/images/Silver Cufflinks.jpeg' },
+  { id: 12, name: 'Platinum Chain', price: '€600', image: '/images/Platinum Chain.jpg.webp' },
 
   // Ligne 4
   { id: 13, name: 'Rose Gold Bangle', price: '€220', image: '/images/product13.jpg' },
