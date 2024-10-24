@@ -1,41 +1,96 @@
 .header {
-    width: 90vh;
-    height: 8vh;
-    background-image: url('https://st2.depositphotos.com/4259495/7397/i/600/depositphotos_73973995-stock-photo-grey-gradient-blurred-abstract-background.jpg');
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-    border-radius: 10px;
-    margin-left: -20rem;
-    padding-bottom: 2rem;
-    padding-top: 4rem;
+  width: 50vh;
+  height: 8vh;
+  right: 5px;
+  background-image: url('https://st2.depositphotos.com/4259495/7397/i/600/depositphotos_73973995-stock-photo-grey-gradient-blurred-abstract-background.jpg');
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+ 
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+
+  &__nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    color: #fff;
-  
- 
-  
-    &__nav a {
+
+    a {
       margin: 1rem 1rem 3rem 2rem;
-      margin-bottom:30rem;
+      margin-bottom: 30rem;
       color: #fff;
       text-decoration: none;
       transition: color 0.3s;
-  
+
       &:hover {
         color: #ffc229;
       }
     }
+
+    .header__icon {
+      margin: 0 1.5rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #ffc229;
+      }
+    }
+
+    .header__search-input {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color 0.3s;
+      
+      &:focus {
+        border-color: #ffc229;
+      }
+    }
   }
-  
+
   .logo-tecum {
     margin-left: 0.5rem;
     margin-top: 0.5rem;
-
-    width: 55px; 
-    height: 55px; 
-    border-radius: 50%; 
-    object-fit: cover; 
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
     cursor: pointer;
   }
+
+  .cart-modal {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 300px;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+
+    h3 {
+      margin-top: 0;
+    }
+
+    button {
+      background-color: #ffc229;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #e6b020;
+      }
+    }
+  }
+}
