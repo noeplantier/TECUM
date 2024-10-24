@@ -5,6 +5,8 @@ const products = [
   { id: 1, name: 'Gold Necklace', price: '€200', image: '/images/product1.jpg' },
   { id: 2, name: 'Diamond Ring', price: '€500', image: '/images/product2.jpg' },
   { id: 3, name: 'Silver Bracelet', price: '€150', image: '/images/product3.jpg' },
+  { id: 4, name: 'Gold Neckless', price: '€100', image: '/images/product3.jpg' },
+
 ];
 
 const FeaturedProducts = () => {

@@ -9,7 +9,8 @@
     color: #fff;
     text-align: center;
     padding: 0 2rem;
-  
+
+
     .hero-content {
       max-width: 600px;
   
@@ -23,7 +24,7 @@
         font-size: 1.2rem;
         margin-bottom: 2rem;
       }
-  
+ 
       .hero-button {
         background-color: #000;
         color: #ffc229;
@@ -41,4 +42,21 @@
       }
     }
   }
+  .clemdetrem1{
+
+    width: 110vh;
+    height: 90vh;
+  }
+
+  .clemdetrem2{
+
+    width: 110vh;
+    height: 90vh;
   
+  }
+
+  .clemdetrem1, .clemdetrem2{
+
+    display: inline-block;
+  }
+

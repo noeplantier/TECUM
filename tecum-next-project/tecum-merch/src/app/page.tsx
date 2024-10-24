@@ -9,7 +9,6 @@ import './page.scss';
 const Home = () => {
   return (
     <div className="home-page">
-      <Header />
       <HeroSection />
       <FeaturedProducts />
       <About/>
