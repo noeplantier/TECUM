@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import '../../styles/Header.scss';
-import { FaSearch, FaShoppingBag } from 'react-icons/fa';
+import { FaSearch, FaShoppingBag, FaTimes } from 'react-icons/fa';
 
 const Header = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   const toggleSearchInput = () => {
-    setIsSearchOpen(true);
+    setIsSearchOpen(!isSearchOpen);
   };
 
   useEffect(() => {
@@ -52,12 +52,15 @@ const Header = () => {
         </div>
 
         {isSearchOpen ? (
-          <input
-            type="text"
-            placeholder="Recherche..."
-            className="header__search-input"
-            autoFocus
-          />
+          <div className="header__search-container">
+            <input
+              type="text"
+              placeholder="Recherche..."
+              className="header__search-input"
+              autoFocus
+            />
+            <FaTimes className="header__icon header__close-icon" onClick={toggleSearchInput} />
+          </div>
         ) : (
           <FaSearch className="header__icon" onClick={toggleSearchInput} />
         )}

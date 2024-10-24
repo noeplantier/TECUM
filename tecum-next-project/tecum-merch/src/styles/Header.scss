@@ -1,10 +1,12 @@
 .header {
-  width: 50vh;
+  width: 10vh;
   height: 8vh;
   background-image: url('https://st2.depositphotos.com/4259495/7397/i/600/depositphotos_73973995-stock-photo-grey-gradient-blurred-abstract-background.jpg');
   font-size: 1rem;
+  right:0.5rem;
+  left:0.5rem;
   margin-bottom: 1rem;
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   border-radius: 10px;
  
   display: flex;
@@ -16,6 +18,7 @@
     align-items: center;
 
     a {
+      font-weight: 900;
       margin: 1rem 1rem 3rem 2rem;
       margin-bottom: 30rem;
       color: #fff;
@@ -67,7 +70,8 @@
     position: absolute;
     top: 70px;
     right: 20px;
-    width: 300px;
+    width: 500px;
+    height:300px;
     background-color: #333;
     color: #fff;
     padding: 1rem;
