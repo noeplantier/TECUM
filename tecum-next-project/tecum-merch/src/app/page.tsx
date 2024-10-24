@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import FeaturedProducts from './components/FeaturedProducts';
 import About from './pages/about';
 import Footer from './components/Footer';
 import './page.scss';
 import ShippingBanner from './components/ShippingBanner';
+import Carousel from './components/Carousel';
 
 const Home = () => {
   return (
@@ -14,6 +14,7 @@ const Home = () => {
       <HeroSection />
       <FeaturedProducts />
       <About/>
+      <Carousel/>
       <Footer />
     </div>
   );

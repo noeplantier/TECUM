@@ -21,13 +21,13 @@ const products = [
   { id: 12, name: 'Platinum Chain', price: '€600', image: '/images/Platinum Chain.jpg.webp' },
 
   // Ligne 4
-  { id: 13, name: 'Rose Gold Bangle', price: '€220', image: '/images/product13.jpg' },
-  { id: 14, name: 'Crystal Brooch', price: '€80', image: '/images/product14.jpg' },
-  { id: 15, name: 'Turquoise Necklace', price: '€160', image: '/images/product15.jpg' },
-  { id: 16, name: 'White Gold Earrings', price: '€340', image: '/images/product16.jpg' },
+  { id: 13, name: 'Rose Gold Bangle', price: '€220', image: '/images/Rose Gold Bangle.jpg.avif' },
+  { id: 14, name: 'Crystal Brooch', price: '€80', image: '/images/ Crystal Brooch.webp' },
+  { id: 15, name: 'Turquoise Necklace', price: '€160', image: '/images/Turquoise Necklace.jpg' },
+  { id: 16, name: 'White Gold Earrings', price: '€340', image: '/images/whitegoldearrings.jpg' },
 
   // Ligne 5
-  { id: 17, name: 'Amethyst Ring', price: '€275', image: '/images/product17.jpg' },
+  { id: 17, name: 'Amethyst Ring', price: '€275', image: '/images/Amethyst Ring.jpg.webp' },
   { id: 18, name: 'Gold Hoop Earrings', price: '€120', image: '/images/product18.jpg' },
   { id: 19, name: 'Silk Scarf', price: '€60', image: '/images/product19.jpg' },
   { id: 20, name: 'Pearl Bracelet', price: '€200', image: '/images/product20.jpg' },

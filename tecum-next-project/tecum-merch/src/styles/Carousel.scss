@@ -1,8 +1,34 @@
-.swiper-slide {
+// Carousel.scss
+
+.carousel {
+  margin: 0;
+  margin-bottom:-25rem;
+  position: relative;
+  width: 200vh; // Prend toute la largeur disponible
+  height: 100vh; // Ajuster la hauteur selon vos besoins
+
+  .carousel-track {
+    display: flex; // Afficher les éléments côte à côte
+    animation: scroll 10s linear infinite; // Défilement continu
+  }
+
+  .carousel-slide {
+    width: 100%; // Prendre toute la largeur disponible
+    height: 100%; // Prendre toute la hauteur disponible
     img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
+      width: 80vh; // Assurer que les images remplissent chaque slide
+      height: 50vh; // Maintenir les proportions
+      object-fit: cover; // Couvrir tout l'espace sans déformer
     }
   }
-  
+
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0); // Position de départ
+    }
+    100% {
+      transform: translateX(-100%); // Défilement complet vers la gauche
+    }
+  }
+}

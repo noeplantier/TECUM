@@ -2,6 +2,14 @@
     padding: 3rem;
     text-align: center;
   
+    .logo-tecum{
+    margin-bottom: 10rem;
+    margin-top: 10rem;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    }
     h1 {
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
@@ -14,4 +22,3 @@
       color: #666;
     }
   }
-  
