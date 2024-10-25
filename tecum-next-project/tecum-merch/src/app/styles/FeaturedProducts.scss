@@ -1,7 +1,7 @@
 .featured-products {
   padding: 2rem;
-  background-color: #f4f4f4;
-
+  background-image: url('https://images.unsplash.com/photo-1594922234647-4ade6282c369?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D');
+  background-size: contain;
   h2 {
     text-align: center;
     color: #333;
@@ -16,9 +16,10 @@
 
   .product-card {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 1rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(172, 172, 172);
+    box-shadow: 1 0 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s;
 

@@ -1,8 +1,6 @@
 .footer {
     background-color: #000;
-    color: #000000;
-    padding-bottom: 60rem;
-    padding-top: 50rem;
+
 
     text-align: center;
     
@@ -12,6 +10,7 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 2rem;
+      padding-top:5rem ;
       
       .footer__links {
         display: flex;
@@ -48,6 +47,7 @@
     .footer__middle {
       margin: 2rem 0;
       text-align: center;
+      padding: 5rem;
   
       h3 {
         font-size: 1.8rem;
