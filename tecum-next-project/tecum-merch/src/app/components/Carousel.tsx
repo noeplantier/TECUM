@@ -2,7 +2,7 @@
 "use client";
 
 import React from 'react';
-import '../../styles/Carousel.scss';
+import '../styles/Carousel.scss';
 
 const Carousel: React.FC = () => {
   return (

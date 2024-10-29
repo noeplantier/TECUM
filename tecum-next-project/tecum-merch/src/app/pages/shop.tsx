@@ -1,8 +1,7 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+
 import ProductGrid from '../components/ProductGrid';
-import '../../styles/Shop.scss';
+import '../styles/Shop.scss';
 
 const Shop = () => {
   return (

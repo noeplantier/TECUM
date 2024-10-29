@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import '../../styles/Footer.scss';
+import '../styles/Footer.scss';
 import { FaInstagram, FaFacebookF, FaTwitter, FaPinterestP, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {

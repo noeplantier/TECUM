@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import '../../styles/ProductDetail.scss';
+import '../styles/ProductDetail.scss';
 
 // Importez la liste de produits pour obtenir les données d'un produit par ID
 import products from './ProductData';

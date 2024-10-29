@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import '../../styles/Header.scss';
+import '../styles/Header.scss';
 import { FaSearch, FaShoppingBag, FaTimes } from 'react-icons/fa';
 
 const Header = () => {

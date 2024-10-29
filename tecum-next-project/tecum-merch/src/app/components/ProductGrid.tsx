@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../ProductGrid.scss';
+import '../ProductGrid.scss';
 
 const products = [
   { id: 1, name: 'Elegant Earrings', price: '€120', image: '/images/product4.jpg' },

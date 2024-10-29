@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import BlogPosts from '../components/BlogPosts';
-import '../../styles/Blog.scss';
+import '../styles/Blog.scss';
 
 const Blog = () => {
   return (

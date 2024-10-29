@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/FeaturedProducts.scss';
+import '../styles/FeaturedProducts.scss';
 
 const products = [
   // Ligne 1
@@ -48,7 +48,7 @@ const products = [
 const FeaturedProducts = () => {
   return (
     <section className="featured-products">
-      <h2>Featured Products</h2>
+      <h2 className='feature-title'>Featured Products</h2>
       <div className="product-grid">
         {products.map((product) => (
           <div key={product.id} className="product-card">

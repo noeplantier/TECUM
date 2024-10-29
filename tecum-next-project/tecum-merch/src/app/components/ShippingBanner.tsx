@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import '../../styles/ShippingBanner.scss';
+import '../styles/ShippingBanner.scss';
 
 const messages = [
   "🚚 Free shipping on orders over €100!",
