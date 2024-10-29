@@ -2,9 +2,9 @@
 
 .carousel {
   margin: 0;
-  margin-bottom:-20rem;
+  margin-bottom:-22.5rem;
   position: relative;
-  width: 200vh; // Prend toute la largeur disponible
+  width: 100vh; // Prend toute la largeur disponible
   height: 100vh; // Ajuster la hauteur selon vos besoins
 
   .carousel-track {
@@ -13,7 +13,7 @@
   }
 
   .carousel-slide {
-    width: 100%; // Prendre toute la largeur disponible
+    width: 100vh; // Prendre toute la largeur disponible
     height: 100%; // Prendre toute la hauteur disponible
     img {
       width: 80vh; // Assurer que les images remplissent chaque slide
@@ -25,7 +25,7 @@
 
   @keyframes scroll {
     0% {
-      transform: translateX(0); // Position de départ
+      transform: translateX(10); // Position de départ
     }
     100% {
       transform: translateX(-100%); // Défilement complet vers la gauche

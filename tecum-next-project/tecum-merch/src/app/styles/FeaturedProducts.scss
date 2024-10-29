@@ -1,13 +1,16 @@
 .featured-products {
+  margin-top: -5.6rem;
   padding: 2rem;
   background-image: url('https://images.unsplash.com/photo-1594922234647-4ade6282c369?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D');
   background-size: contain;
 
-  h2 {
-    font-size: 3rem;
-    text-align: center;
-    color: #ffffff;
-  }
+
+  .feature-title{
+      font-size: 3rem;
+      text-align: center;
+      color: #ffffff;
+    }
+  
 
   .product-grid {
     display: grid;
@@ -34,12 +37,12 @@
     h3 {
       margin-top: 1rem;
       font-size: 1.2rem;
-      color: #333;
+      color: #565555;
     }
 
     p {
       font-size: 1rem;
-      color: #777;
+      color: #565555;
     }
 
     .product-button {

@@ -18,6 +18,9 @@ const Carousel: React.FC = () => {
         <div className="carousel-slide">
           <img src="/images/clemdetrem-jewel.jpeg" alt="Slide 3 - Berlin" />
         </div>
+        <div className="carousel-slide">
+          <img src="/images/clemdetrem-payettes.png" alt="Slide 4 - Rotterdam" />
+        </div>
 
         <div className="carousel-slide">
           <img src="/images/clemdetrem-rabanne.jpeg" alt="Slide 1 - Paris" />
@@ -29,7 +32,7 @@ const Carousel: React.FC = () => {
           <img src="/images/clemdetrem-jewel.jpeg" alt="Slide 3 - Berlin" />
         </div>
         <div className="carousel-slide">
-          <img src="/images/clemdetrem-payettes.jpeg" alt="Slide 4 - Rotterdam" />
+          <img src="/images/clemdetrem-payettes.png" alt="Slide 4 - Rotterdam" />
         </div>
       </div>
     </div>

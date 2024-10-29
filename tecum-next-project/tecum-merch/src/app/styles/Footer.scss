@@ -1,7 +1,5 @@
 .footer {
     background-color: #000;
-
-
     text-align: center;
     
     .footer__top {
@@ -29,6 +27,7 @@
       }
   
       .footer__social {
+        right:13rem;
         display: flex;
         gap: 10px;
   

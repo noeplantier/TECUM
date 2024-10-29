@@ -6,7 +6,6 @@ import Footer from './components/Footer';
 import './styles/Page.scss';
 import ShippingBanner from './components/ShippingBanner';
 import Carousel from './components/Carousel';
-import ProductDetail from './components/ProductDetail';
 import ChatBot from './components/ChatBot';
 
 const Home = () => {
@@ -16,7 +15,6 @@ const Home = () => {
       <HeroSection />
       <FeaturedProducts />
       <About/>
-      <ProductDetail/>
       <ChatBot/>
       <Carousel/>
      
