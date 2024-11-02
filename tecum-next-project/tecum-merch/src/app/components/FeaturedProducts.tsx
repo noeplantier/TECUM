@@ -1,13 +1,20 @@
 import React from 'react';
 import '../styles/FeaturedProducts.scss';
 
-const products = [
+interface Product {
+  id: number;
+  name: string;
+  price: string;
+  image: string;
+}
+
+const products: Product[] = [
   // Ligne 1
   { id: 1, name: 'Gold Necklace', price: '€200', image: '/images/goldnecklace.webp' },
   { id: 2, name: 'Diamond Ring', price: '€500', image: '/images/diamondring.jpg.webp' },
   { id: 3, name: 'Silver Bracelet', price: '€150', image: '/images/silverbracelet.jpg' },
   { id: 4, name: 'Emerald Earrings', price: '€100', image: '/images/Emerald Earrings.jpg.webp' },
-  
+
   // Ligne 2
   { id: 5, name: 'Pearl Pendant', price: '€250', image: '/images/Pearl Pendant.jpg' },
   { id: 6, name: 'Sapphire Bracelet', price: '€300', image: '/images/Sapphire Bracelet.jpg.webp' },
@@ -22,7 +29,7 @@ const products = [
 
   // Ligne 4
   { id: 13, name: 'Rose Gold Bangle', price: '€220', image: '/images/Rose Gold Bangle.jpg.avif' },
-  { id: 14, name: 'Crystal Brooch', price: '€80', image: '/images/ Crystal Brooch.webp' },
+  { id: 14, name: 'Crystal Brooch', price: '€80', image: '/images/Crystal Brooch.webp' },
   { id: 15, name: 'Turquoise Necklace', price: '€160', image: '/images/Turquoise Necklace.jpg' },
   { id: 16, name: 'White Gold Earrings', price: '€340', image: '/images/whitegoldearrings.jpg' },
 
@@ -45,7 +52,7 @@ const products = [
   { id: 28, name: 'Platinum Tie Clip', price: '€95', image: '/images/Platinum Tie Clip.jpg' },
 ];
 
-const FeaturedProducts = () => {
+const FeaturedProducts: React.FC = () => {
   return (
     <section className="featured-products">
       <h2 className='feature-title'>Featured Products</h2>
@@ -55,7 +62,7 @@ const FeaturedProducts = () => {
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>
             <p>{product.price}</p>
-            <a href={`/shop/${product.id}`} className="product-button">View Product</a>
+            <a href={`/products/${product.id}`} className="product-button">View Product</a>
           </div>
         ))}
       </div>
