@@ -1,5 +1,6 @@
 {
   "name": "tecum-merch",
+  "proxy": "http://localhost:5000",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,6 +12,8 @@
   "dependencies": {
     "@prisma/client": "^5.14.0",
     "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
     "next": "15.0.1",
     "react": "19.0.0-rc-69d4b800-20241021",
     "react-dom": "19.0.0-rc-69d4b800-20241021",
